@@ -6,6 +6,6 @@
 sudo bash <(curl -s https://raw.githubusercontent.com/Linux1231233/setup/master/install.sh)
 ```
 
-## Contributors ✨
+## Contributors 
 
 Created and maintained by [Linux1231233](https://github.com/linux1231233).
