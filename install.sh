@@ -27,4 +27,4 @@ echo "* Latest version is $VERSION"
 
 curl -o /opt/update.sh $SCRIPT_URL/update.sh
 
-echo '0 0 * * * root sudo bash/opt/update.sh >> /var/log/daily-update.log 2>&1' | sudo tee -a /etc/crontab
+echo '0 0 * * * root sudo bash /opt/update.sh >> /var/log/daily-update.log 2>&1' | sudo tee -a /etc/crontab
