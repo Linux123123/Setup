@@ -1,5 +1,5 @@
-# setup
-Script that sets up Linux 
+Script to set up Debian based (Ubuntu) Linux 
+
 ```bash
 wget https://raw.githubusercontent.com/Linux1231233/setup/master/install.sh
 ```
