@@ -8,7 +8,7 @@ fi
 apt-get update -y
 apt-get upgrade -y
 apt-get full-upgrade -y
-apt-get install curl git wget nano bash pastebinit tmux -y
+apt-get install curl git wget nano bash pastebinit tmux htop -y
 apt-get autoremove -y
 apt-get clean -y
 
