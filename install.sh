@@ -7,13 +7,6 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-apt-get update -y
-apt-get upgrade -y
-apt-get full-upgrade -y
-apt-get install git wget nano pastebinit tmux htop virt-what -y
-apt-get autoremove -y
-apt-get clean -y
-
 get_latest_release() {
   curl --silent "https://api.github.com/repos/$1/releases/latest" | # Get latest release from GitHub api
     grep '"tag_name":' |                                            # Get tag line
@@ -24,6 +17,13 @@ echo "* Retrieving release information.."
 VERSION="$(get_latest_release "Linux1231233/setup")"
 
 echo "* Latest version is $VERSION"
+
+apt-get update -y
+apt-get upgrade -y
+apt-get full-upgrade -y
+apt-get install git wget nano pastebinit tmux htop virt-what -y
+apt-get autoremove -y
+apt-get clean -y
 
 curl -o /opt/update.sh https://raw.githubusercontent.com/Linux1231233/setup/master/scripts/update.sh
 
