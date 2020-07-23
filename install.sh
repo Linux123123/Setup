@@ -10,7 +10,7 @@ fi
 apt-get update -y
 apt-get upgrade -y
 apt-get full-upgrade -y
-apt-get install git wget nano pastebinit tmux htop -y
+apt-get install git wget nano pastebinit tmux htop virt-what -y
 apt-get autoremove -y
 apt-get clean -y
 
