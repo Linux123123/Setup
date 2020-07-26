@@ -18,6 +18,14 @@ VERSION="$(get_latest_release "Linux1231233/setup")"
 
 echo "* Latest version is $VERSION"
 
+echo -e -n "* Are you sure you want to proceed? (y/N): "
+
+read -r CONFIRM_PROCEED
+  if [[ ! "$CONFIRM_PROCEED" =~ [Yy] ]]; then
+    print_error "Installation aborted!"
+    exit 1
+  fi
+
 apt-get update -y
 apt-get upgrade -y
 apt-get full-upgrade -y
