@@ -26,6 +26,8 @@ if [[ ! "$CONFIRM_PROCEED" =~ [Yy] ]]; then
   exit 1
 fi
 
+timedatectl set-timezone Europe/Vilnius
+
 apt-get update -y
 apt-get upgrade -y
 apt-get full-upgrade -y
