@@ -7,19 +7,6 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-get_latest_release() {
-  curl --silent "https://api.github.com/repos/$1/releases/latest" | # Get latest release from GitHub api
-    grep '"tag_name":' |                                            # Get tag line
-    sed -E 's/.*"([^"]+)".*/\1/'                                    # Pluck JSON value
-}
-
-echo "* Retrieving release information.."
-VERSION="$(get_latest_release "Linux1231233/setup")"
-
-echo "* Latest version is $VERSION"
-
-echo -e -n "* Are you sure you want to proceed? (y/N): "
-
 read -r CONFIRM_PROCEED
 if [[ ! "$CONFIRM_PROCEED" =~ [Yy] ]]; then
   print_error "Installation aborted!"
