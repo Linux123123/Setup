@@ -7,6 +7,8 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
+echo "* Do you want to proceed? [y]: "
+
 read -r CONFIRM_PROCEED
 if [[ ! "$CONFIRM_PROCEED" =~ [Yy] ]]; then
   print_error "Installation aborted!"
