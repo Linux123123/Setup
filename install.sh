@@ -22,6 +22,6 @@ apt-get install git wget nano pastebinit tmux htop virt-what -y
 apt-get autoremove -y
 apt-get clean -y
 
-curl -o /opt/update.sh https://raw.githubusercontent.com/Linux1231233/setup/master/scripts/update.sh
+curl -o /opt/update.sh https://raw.githubusercontent.com/Linux123123/setup/master/scripts/update.sh
 
 echo '0 0 * * * root sudo bash /opt/update.sh >> /var/log/daily-update.log 2>&1' | sudo tee -a /etc/crontab
